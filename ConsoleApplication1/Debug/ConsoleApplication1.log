@@ -1,8 +1,0 @@
-﻿  pch.cpp
-  IDList.cpp
-  src.cpp
-  heat.cpp
-  TextAbout.cpp
-F:\prog\c++\ConsoleApplication1\ConsoleApplication1\TextAbout.cpp(32,10): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
-  正在生成代码...
-  ConsoleApplication1.vcxproj -> F:\prog\c++\ConsoleApplication1\Debug\Gregtech6Calc.exe

@@ -5,11 +5,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-typedef unsigned char u8;
-typedef unsigned int u16;
-typedef double f32;
-
 void ShowMemu();
 void ShowAlloy(bool out = 1, bool ask = 0);
 void ShowCrucible(bool out = 1, bool ask = 0);

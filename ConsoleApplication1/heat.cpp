@@ -1,14 +1,9 @@
 #include "pch.h"
 #include <iostream>
+
+#include "using.h"
 #include "bases.h"
-
-class heat
-{
-private:
-
-public:
-	
-};  //TODO:heat()
+#include "AlloyMelt.h"
 
 void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 {

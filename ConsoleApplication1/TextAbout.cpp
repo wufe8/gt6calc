@@ -1,6 +1,9 @@
 #include "pch.h"
 #include <iostream>
+
+#include "using.h"
 #include "bases.h"
+#include "AlloyMelt.h"
 
 void ShowMemu()
 {

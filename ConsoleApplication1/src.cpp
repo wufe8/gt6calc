@@ -1,8 +1,9 @@
 ﻿#include "pch.h"
 #include <iostream>
-#include "bases.h"
 
-using namespace std;
+#include "using.h"
+#include "bases.h"
+#include "AlloyMelt.h"
 
 void alloy();
 void Csteel();
@@ -48,7 +49,7 @@ int main()
 		}
 		}
 		cout << "|-----------PROCESS_COMPLATE---------------|" << endl << endl;
-	} while (getValue != 9);  //do...while
+	} while (getValue != 9); //getValue != 9);  //do...while
 	return 0;
 }
 
