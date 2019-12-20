@@ -5,6 +5,8 @@
 #include "bases.h"
 #include "AlloyMelt.h"
 
+//main function here
+
 void alloy();
 void Csteel();
 void SimpleHeat();
@@ -39,6 +41,14 @@ int main()
 			Heat();
 			break;
 		}
+		case 5:
+		{
+			heatCalc heatAbout;
+			heatAbout.ShowItem();
+			heatAbout.getChamber();
+			heatAbout.bufferOutput(1);
+			break;
+		}
 		case 9:
 		{
 			break;  //end program
@@ -60,7 +70,7 @@ void alloy()
 
 void Csteel()
 {
-	u16 q1, q2, q3;
+	u8 q1, q2, q3;
 	cout << "Target Carbon(0) or Fe3O4(1) or Steel(2)? ";
 	cin >> q1;											   //7Fe3O4+3C->3Fe(w) in 1811k , Fe(r)->Fe(w) in 2011k , Fe(w)+1/50C->Fe50C in 2046k 1纯净磁铁矿石=1.25Fe3O4 使用碳粉代替石墨消耗减半
 	cout << "Using Pure Fe3O4 Ore(0) or BlackSand(1)? ";   //综上所述 得:X=7*A/3*1.25 Y=A+B B=A/50 Z=C A=C或A=C/2

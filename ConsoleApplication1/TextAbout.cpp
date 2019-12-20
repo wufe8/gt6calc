@@ -5,6 +5,8 @@
 #include "bases.h"
 #include "AlloyMelt.h"
 
+//text function about
+
 void ShowMemu()
 {
 	cout << "|---------List---------|" << endl

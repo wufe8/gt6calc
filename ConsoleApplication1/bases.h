@@ -5,6 +5,12 @@
 #include <iostream>
 #include <string>
 
+//struct and function pototype here
+
+u16 Get_ChamberList_Len();
+u16 Get_CrucibleList_Len();
+u16 Get_ItemList_Len();
+
 void ShowMemu();
 void ShowAlloy(bool out = 1, bool ask = 0);
 void ShowCrucible(bool out = 1, bool ask = 0);

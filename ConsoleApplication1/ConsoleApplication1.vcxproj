@@ -154,6 +154,8 @@
   <ItemGroup>
     <ClInclude Include="bases.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="AlloyMelt.h" />
+    <ClInclude Include="using.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IDList.cpp" />
@@ -168,6 +170,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TextAbout.cpp" />
+    <ClCompile Include="AlloyMelt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

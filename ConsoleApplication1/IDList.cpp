@@ -5,7 +5,9 @@
 #include "bases.h"
 #include "AlloyMelt.h"
 
-chamber ChamberList[]
+//id list here
+
+chamber ChamberList[]    //1-6
 {
 	{
 		"NULL",0,0           //无
@@ -24,7 +26,7 @@ chamber ChamberList[]
 	}
 };
 
-crucible CrucibleList[] =
+crucible CrucibleList[] =    //1-5
 {
 	{
 		"NULL",0,                         //0.无
@@ -53,10 +55,10 @@ crucible CrucibleList[] =
 	}
 };
 
-matter ItemList[] =
+matter ItemList[] =    //1-27
 {
 	{
-		"null","null",					//0.无
+		"null","null",        //0.无
 		0,0,
 		0,
 		0
@@ -197,3 +199,27 @@ matter ItemList[] =
 		1672.579
 	},
 };
+
+u16 Get_ChamberList_Len()         //cant use parameter because will get pointer
+{
+	u16 len = 0;
+	len = sizeof(ChamberList) / sizeof(ChamberList[0]);
+	cout << len << endl;
+	return len;
+}
+
+u16 Get_CrucibleList_Len()
+{
+	u16 len = 0;
+	len = sizeof(CrucibleList) / sizeof(CrucibleList[0]);
+	cout << len << endl;
+	return len;
+}
+
+u16 Get_ItemList_Len()
+{
+	u16 len = 0;
+	len = sizeof(ItemList) / sizeof(ItemList[0]);
+	cout << len << endl;
+	return len;
+}

@@ -5,6 +5,8 @@
 #include "bases.h"
 #include "AlloyMelt.h"
 
+//key3-heat calc here
+
 void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 {
 	u16 i;       //'for' count
@@ -14,20 +16,23 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 	f32 Q = 0, Q0 = 0, m = 0, T = 0;      //Q=actual heat unit(HU), Q0=useful heat unit(HU), m=total matter(kg), T=tamperture(K)  定义:1HU可使100kg物质温度上升1k T=Q0m/100
 	f32 Power = 0, Power0 = 0, eta = 0, time = 0; // Power = Power(HU/t) Power0 = useful Power(HU/t) eta = efficiency(%) time(tick/s) eta=P0/P*100% 
 	f32 CoalInNeed;
-	f32* inBase = new f32;        //坩埚材质
-	bool baseType;		//是否大型坩埚
-	f32 isBaseSize;
+	u8 baseType;		//是否大型坩埚
+	f32 isBaseSize;     //坩埚大小:小型16(64),大型432(480)	
 	u16 inM[32];
 	CrucibleValue = askReceive(ShowCrucible, 1, 6);	//decide the kind of crucible 录入坩埚数据
-	*inBase = CrucibleList[CrucibleValue].weight;
-	m += *inBase;
+	m += CrucibleList[CrucibleValue].weight;    //+坩埚质量
 	cout << "Is mega crucible?" << endl;
 	cin >> baseType;
-	if (baseType)isBaseSize = 432;
-	else isBaseSize = 16;
-	delete inBase;
+	if (baseType)
+	{
+		isBaseSize = 432;
+	}
+	else
+	{
+		isBaseSize = 16;
+	}
 	cout << "now the crucible weight " << m << "kg, " << totaln << "/"
-		<< isBaseSize << " (" << isBaseSize + 48 << ") unit inside" << endl;
+	<< isBaseSize << " (" << isBaseSize + 48 << ") unit inside" << endl;
 	ShowItemtList(1, 0);
 	for (i = 1; i < 16 && jump == 0; i++)         //input item 录入投入物品数据 start 1 becauce of count
 	{
