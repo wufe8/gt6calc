@@ -19,7 +19,7 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 	f32 isBaseSize;
 	u16 inM[32];
 	CrucibleValue = askReceive(ShowCrucible, 1, 6);	//decide the kind of crucible 录入坩埚数据
-	*inBase = CrucibleList[CrucibleValue]->weight;
+	*inBase = CrucibleList[CrucibleValue].weight;
 	m += *inBase;
 	cout << "Is mega crucible?" << endl;
 	cin >> baseType;
@@ -58,7 +58,7 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 				n = 64 - totaln;   //the crucible cant get more then 64 unit, clear overpart
 				jump = 1;
 			} //end if
-			m += ItemList[inM[i]]->weight * n;  //normal case: m总+=m*n
+			m += ItemList[inM[i]].weight * n;  //normal case: m总+=m*n
 		}
 		else  //receve the Error when enter a wrong number
 		{
@@ -72,8 +72,8 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 		cout << "now the crucible weight " << m << "kg" << endl;
 	} //end for
 	ChamberValue = askReceive(ShowChamber, 1, 6);	//decide the kind of chamber 录入燃烧室数据
-	eta = ChamberList[ChamberValue]->effectiveness;	//燃烧效率
-	Power0 = ChamberList[ChamberValue]->HUoutput;		//燃烧功率
+	eta = ChamberList[ChamberValue].effectiveness;	//燃烧效率
+	Power0 = ChamberList[ChamberValue].HUoutput;		//燃烧功率
 	bool dense;
 	cout << "Is dense chamber?(0 or 1)" << endl;
 	cin >> dense;
@@ -81,14 +81,14 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 	do
 	{
 		cout << "Enter target tamperture(base in 286k"
-			<< ",max tamp in " << CrucibleList[CrucibleValue]->explore << "): ";
+			<< ",max tamp in " << CrucibleList[CrucibleValue].explore << "): ";
 		cin >> T;
-		if (T >= CrucibleList[CrucibleValue]->explore)
+		if (T >= CrucibleList[CrucibleValue].explore)
 		{
 			cout << endl << "Error:The crucible will be explore in "
-				<< CrucibleList[CrucibleValue]->explore << "k!" << endl;
+				<< CrucibleList[CrucibleValue].explore << "k!" << endl;
 		}
-	}while (T >= CrucibleList[CrucibleValue]->explore);
+	}while (T >= CrucibleList[CrucibleValue].explore);
 	T -= 286; //GT6草原标况 286k (现实:T(k 开尔文)=T(c 摄氏度)+273.15k)
 	Q0 = T * m / 100;
 	Q = Q0 / eta;
