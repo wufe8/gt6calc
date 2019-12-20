@@ -32,7 +32,7 @@ void ShowAlloy(bool out, bool ask)
 		<< "6((Fe50C)W)5,2CrMo2V+Co+Mn+Si -> 9(((Fe50C)W)5,2CrMo2V)6,9CoMnSi  in 2314k" << endl
 		<< "6((Fe50C)W)5,2CrMo2V+2OsIr+Ir -> 9(((Fe50C)W)5,2CrMo2V)6,9(OsIr)Ir  in 2786k" << endl
 		<< "---------------------------------------------------------------------------------" << endl;
-	if (ask); //TODO:anything want to cout
+	//if (ask); //TODO:anything want to cout
 }
 void ShowCrucible(bool out, bool ask)
 {
