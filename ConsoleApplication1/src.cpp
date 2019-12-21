@@ -44,9 +44,19 @@ int main()
 		case 5:
 		{
 			heatCalc heatAbout;
-			heatAbout.ShowItem();
-			heatAbout.getChamber();
+			heatAbout.getCrucible();
 			heatAbout.bufferOutput(1);
+			u16 getID = 0, getN = 0, getPos = 0, getMod = 0;
+			u8 getSign = 0;
+			do
+			{
+				getSign = heatAbout.getItem();
+				//cout << "#_DEBUG_MODE_# Receive = " << getSign << endl;
+			} while (getSign != 1);
+			heatAbout.getChamber();
+			heatAbout.setTempture();
+			heatAbout.bufferOutput(1);
+			heatAbout.featureOutput();
 			break;
 		}
 		case 9:

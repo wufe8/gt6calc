@@ -14,7 +14,8 @@ void ShowMemu()
 		<< "|1.alloy---------------|" << endl
 		<< "|2.Steel---------------|" << endl
 		<< "|3.SimpleHeat----------|" << endl
-		<< "|4.heat----------------|" << endl
+		<< "|4.(old)heat-----------|" << endl
+		<< "|5.(new)heat-----------|" << endl
 		<< "|9.Exit----------------|" << endl;
 }
 void ShowAlloy(bool out, bool ask)

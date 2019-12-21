@@ -60,7 +60,7 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 			else if (totaln + n >= isBaseSize + 48)      //the crucible cant get item any more
 			{
 				cout << endl << "Attention: the crucible is actually full (" << isBaseSize + 48 << " unit)" << endl;
-				n = 64 - totaln;   //the crucible cant get more then 64 unit, clear overpart
+				n = isBaseSize + 48 - totaln;   //the crucible cant get more then (isBaseSize + 48) unit, clear overpart
 				jump = 1;
 			} //end if
 			m += ItemList[inM[i]].weight * n;  //normal case: m总+=m*n
@@ -79,10 +79,13 @@ void Heat() //need :chamberType,crucibleType,matterType,num,targetTempture,
 	ChamberValue = askReceive(ShowChamber, 1, 6);	//decide the kind of chamber 录入燃烧室数据
 	eta = ChamberList[ChamberValue].effectiveness;	//燃烧效率
 	Power0 = ChamberList[ChamberValue].HUoutput;		//燃烧功率
-	bool dense;
+	u8 dense;
 	cout << "Is dense chamber?(0 or 1)" << endl;
 	cin >> dense;
-	if (dense == 1)Power0 *= 4;
+	if (dense == 1)
+	{
+		Power0 *= 4;
+	}
 	do
 	{
 		cout << "Enter target tamperture(base in 286k"

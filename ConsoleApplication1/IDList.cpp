@@ -202,24 +202,15 @@ matter ItemList[] =    //1-27
 
 u16 Get_ChamberList_Len()         //cant use parameter because will get pointer
 {
-	u16 len = 0;
-	len = sizeof(ChamberList) / sizeof(ChamberList[0]);
-	cout << len << endl;
-	return len;
+	return sizeof(ChamberList) / sizeof(ChamberList[0]);
 }
 
 u16 Get_CrucibleList_Len()
 {
-	u16 len = 0;
-	len = sizeof(CrucibleList) / sizeof(CrucibleList[0]);
-	cout << len << endl;
-	return len;
+	return sizeof(CrucibleList) / sizeof(CrucibleList[0]);
 }
 
 u16 Get_ItemList_Len()
 {
-	u16 len = 0;
-	len = sizeof(ItemList) / sizeof(ItemList[0]);
-	cout << len << endl;
-	return len;
+	return sizeof(ItemList) / sizeof(ItemList[0]);
 }
