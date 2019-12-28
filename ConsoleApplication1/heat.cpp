@@ -1,4 +1,5 @@
 #include "pch.h"
+/* unused
 #include <iostream>
 
 #include "using.h"
@@ -150,3 +151,4 @@ u16 askReceive(void (*fnOut)(bool, u16), u16 idOp, u16 idEd, u16& count)
 	} while (buffer < idOp || buffer > idEd);
 	return buffer;
 }
+*/

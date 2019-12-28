@@ -14,8 +14,7 @@ void ShowMemu()
 		<< "|1.alloy---------------|" << endl
 		<< "|2.Steel---------------|" << endl
 		<< "|3.SimpleHeat----------|" << endl
-		<< "|4.(old)heat-----------|" << endl
-		<< "|5.(new)heat-----------|" << endl
+		<< "|4.heat----------------|" << endl
 		<< "|9.Exit----------------|" << endl;
 }
 void ShowAlloy(bool out, bool ask)
@@ -37,6 +36,7 @@ void ShowAlloy(bool out, bool ask)
 		<< "---------------------------------------------------------------------------------" << endl;
 	//if (ask); //TODO:anything want to cout
 }
+/*
 void ShowCrucible(bool out, bool ask)
 {
 	if (out)
@@ -98,3 +98,4 @@ void ShowItemtList(bool out, u16 count)
 	if (count)cout << endl << "input the " << count
 		<< " item:(enter 0 to Show item list)" << endl;
 }
+*/
