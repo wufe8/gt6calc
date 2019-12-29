@@ -153,12 +153,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="bases.h" />
+    <ClInclude Include="IDList.h" />
+    <ClInclude Include="Interface.h" />
+    <ClInclude Include="other.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="AlloyMelt.h" />
     <ClInclude Include="using.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IDList.cpp" />
+    <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="other.cpp" />
     <ClCompile Include="src.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -36,3 +36,19 @@
 *.pdb
 *.tlog
 *.idb
+*.vcsproj
+*.filters
+*.user
+*.lastcodeanalysissucceeded
+
+#vs Incremental Link-Time Code Generation
+*.iobj
+*.ipdb
+*.ipch
+
+#vs workplace
+.vs/
+Debug/
+Release/
+**/Debug/
+**/Release/

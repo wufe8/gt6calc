@@ -2,7 +2,6 @@
 #include <iostream>
 
 #include "using.h"
-#include "bases.h"
 #include "AlloyMelt.h"
 
 //id list here
