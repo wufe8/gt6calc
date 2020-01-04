@@ -3,6 +3,7 @@
 #define DATA_H
 
 #include "base.h"
+#include "using.h"
 
 struct Ing
 {
@@ -11,10 +12,14 @@ struct Ing
 
 struct Recipe
 {
-	int id[];
-	double number[];
+	u16 iid[4];          //input item id
+	u16 oid[4];          //output item id
+	f32 inumber[4];   //input item number
+	f32 onumber[4];   //output item number
+	f32 time;
 }RecipeList[];
 
-int getIngLen();
+u16 getIngLen();
+u16 getRecipeLen();
 
 #endif //!DATA_H
