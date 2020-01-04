@@ -9,6 +9,12 @@ struct Ing
 	string name;
 }IngList[];
 
+struct Recipe
+{
+	int id[];
+	double number[];
+}RecipeList[];
+
 int getIngLen();
 
 #endif //!DATA_H

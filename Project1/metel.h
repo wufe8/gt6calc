@@ -19,7 +19,7 @@ private:
 	double Precent[12];
 public:
 	metel();
-	//string getIng(int a);
+	void getIng(int a);
 	void outList();
 };
 
