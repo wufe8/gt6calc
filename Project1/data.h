@@ -12,10 +12,10 @@ struct Ing
 
 struct Recipe
 {
-	u16 iid[4];          //input item id
-	u16 oid[4];          //output item id
-	f32 inumber[4];   //input item number
-	f32 onumber[4];   //output item number
+	u16 iid[9];          //input item id
+	u16 oid[9];          //output item id
+	f32 imagn[9];   //input item number
+	f32 omagn[9];   //output item number
 	f32 time;
 }RecipeList[];
 

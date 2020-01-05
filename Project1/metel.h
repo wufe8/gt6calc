@@ -22,19 +22,23 @@ protected:
 		u16 len;        //the len of rpos->"struct"
 		u16 id;         //pos->"struct"[rid]
 	}RecipeAbout;
-	u16 writed;     //had item id
-	u16 writedType;  //had in/out item
-	f32 icount[4];         //number the inneed item
-	f32 ocount[4];          //number the geting item
-
+	u16 SID[18];         //surface id
+	f32 SIDmagn[18];     //Ing magn (SID)
+	u16 SIDline;    //isolution i/o SID
+	u16 SIDlen;     //SID[] signed len
+	u16 writedSID;     //had Ing (SID)
+	f32 countSID[18];         //number the Ing (SID)
+	void SIDswitch();
 public:
-	void calc(u16 HadIng);
+	void calc();
 	metel();
 	void GetRecipeID(u16 RecipeID);
-	u8 GetHadIng(u16 IngSID, u16 IngNumber);
+	u8 GetHadIng(u16 IngSID, f32 IngNumber);
 	void ShowRecIng();
 	void ShowIng();
 	void ShowRecipe();
+	u16 oSIDlen();
+	void oProcess();
 };
 
 #endif // !SRC_H
