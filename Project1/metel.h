@@ -28,6 +28,7 @@ protected:
 	u16 SIDlen;     //SID[] signed len
 	u16 writedSID;     //had Ing (SID)
 	f32 countSID[18];         //number the Ing (SID)
+	f32 time;
 	void SIDswitch();
 public:
 	void calc();

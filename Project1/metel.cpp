@@ -13,6 +13,7 @@ metel::metel()
 	SIDline = 0;
 	SIDlen = 0;
 	writedSID = 0;
+	time = 0;
 	cout << "class metel has been create!" << endl     //test and debug
 		<< "get IngList len:" << IngAbout.len << endl
 		<< "get RecipeList len:" << RecipeAbout.len << endl;
@@ -69,6 +70,7 @@ void metel::calc()
 	{
 		countSID[i] = base * SIDmagn[i];
 	}
+	time = base * (RecipeAbout.pos + RecipeAbout.id)->time;
 }
 
 u16 metel::oSIDlen()
@@ -95,7 +97,7 @@ void metel::oProcess()
 			cout << " = ";
 		}
 	}
-	cout << endl;
+	cout << "    time:" << time << "s (" << time * 20 << "t)" << endl;
 }
 
 void metel::ShowRecIng()           //need set up RecipeAbout.id first
