@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gregtech6Calc", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{D4D8A274-183D-4F88-AC18-EC6FFCE2C021}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gregtech6Calc", "Gregtech6Calc\Gregtech6Calc.vcxproj", "{D4D8A274-183D-4F88-AC18-EC6FFCE2C021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
